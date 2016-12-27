@@ -16,7 +16,7 @@ public class Picture implements Serializable{
         this.name = name;
     }
 
-    public void addLine(int[]... array){
+    public void addPolygon(int[]... array){
         polygons.add(array);
     }
 
