@@ -8,6 +8,7 @@ http://i.imgur.com/kcyRo8M.png
 Please use responsibly!
 
 Areas of interest:
+  
   Hotkeys
   
   GUI to bind Hotkeys
