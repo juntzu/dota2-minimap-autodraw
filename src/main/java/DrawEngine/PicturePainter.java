@@ -1,12 +1,11 @@
 package DrawEngine;
 
 import java.awt.*;
-import java.util.List;
 
 /**
  * Created by Chris on 27/12/2016.
  */
-public class PictureController {
+public class PicturePainter {
 
 //TODO refactor class
 
@@ -15,27 +14,26 @@ public class PictureController {
     int movementDelay = 6;
     InputController inputController = new InputController();
 
-    public PictureController() throws AWTException {}
+    public PicturePainter() throws AWTException {}
 
 
     public void drawPicture(Picture picture){
-        for(int[][] line:picture.getLines()){
-            drawLine(line);
+        for(int[][] polygon:picture.getPolygons()){
+            drawPolygon(polygon);
         }
     }
 
-    public void drawLine(int[][] line){
-        int mouseX = line[0][0], mouseY = line[0][1];
+    public void drawPolygon(int[][] polygon){
+        int mouseX = polygon[0][0], mouseY = polygon[0][1];
         setup(mouseX,mouseY);
-        for(int i =1; i<line.length;i++){
+        for(int i =1; i<polygon.length;i++){
             while(true) {
-                float dirX = line[i][0] - mouseX;
-                float dirY = line[i][1] - mouseY;
+                float dirX = polygon[i][0] - mouseX;
+                float dirY = polygon[i][1] - mouseY;
                 double length = Math.sqrt(dirX*dirX + dirY*dirY);
                 double xSpeed = dirX/length;
                 double ySpeed = dirY/length;
-
-
+                
                 if(Double.isNaN(xSpeed)&&Double.isNaN(ySpeed)){
                     break;
                 }

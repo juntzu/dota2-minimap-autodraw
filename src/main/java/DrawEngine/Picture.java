@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Picture implements Serializable{
 
-    private List<int[][]> lines = new ArrayList<int[][]>();
+    private List<int[][]> polygons = new ArrayList<int[][]>();
 
     String name;
     public Picture(String name){
@@ -17,11 +17,11 @@ public class Picture implements Serializable{
     }
 
     public void addLine(int[]... array){
-        lines.add(array);
+        polygons.add(array);
     }
 
-    public List<int[][]> getLines(){
-        return this.lines;
+    public List<int[][]> getPolygons(){
+        return this.polygons;
     }
 
     public String toString(){
