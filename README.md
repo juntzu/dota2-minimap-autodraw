@@ -13,7 +13,7 @@ Areas of interest:
   
   GUI to bind Hotkeys
   
-  GUI to draw over images and save as serialised Picture object
+  GUI to draw over images and save to file as serialised Picture object (see resources/pictureFiles)
   
   Text to minimap
   
