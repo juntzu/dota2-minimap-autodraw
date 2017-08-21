@@ -1,9 +1,6 @@
 # dota2-minimap-autodraw
 A tool for automated picture drawing on the mini-map in Dota 2. 
 
-http://i.imgur.com/kcyRo8M.png
-
-!!!
 
 Please use responsibly!
 
